@@ -4,48 +4,22 @@ const outputNode = document.getElementById('output');
 
 
 const update = () => {
-  let isInputValid = true;
-  let isOutputValid = true;
-  let ast;
-
   try {
-    ast = esprima.parse(inputNode.value, {sourceType: 'module'});
-    console.log(JSON.stringify(ast, null, ' '));
+    const ast = esprima.parse(inputNode.value, {sourceType: 'module'});
+    const query = queryNode.value.replace(/\n/g, '');
+    const queryAst = esquery.parse(query, {sourceType: 'module'});
+    const matches = esquery.match(ast, queryAst);
+    const numMatches = matches.length;
+    const h4 = document.createElement('h4');
+    h4.textContent = 'Found ' + numMatches + ' node(s)';
+    outputNode.innerHTML = JSON.stringify(matches, null, '  ');
+    outputNode.prepend(h4);
   } catch (e) {
-    console.log(e);
-
-    isInputValid = false;
+    outputNode.innerHTML = e.message;
   }
-  console.log(queryNode)
-  const query = queryNode.value.replace(/\n/g, '');
-  outputNode.innerHTML = '';
-
-  let queryAst;
-  let matches;
-  let matchesOutput;
-
-
-  try {
-    queryAst = esquery.parse(query, {sourceType: 'module'});
-  } catch (e) {
-    isOutputValid = false;
-  }
-
-  try {
-    matches = esquery.match(ast, queryAst);
-  } catch (e) {
-    matchesOutput = e.message;
-  }
-
-
-  matchesOutput = matchesOutput || JSON.stringify(matches, null, '  ');
-
-  console.log(matchesOutput)
-  outputNode.innerHTML = matchesOutput;
 };
 
-inputNode.addEventListener('change', update);
-queryNode.addEventListener('change', update);
+inputNode.addEventListener('keyup', update);
 queryNode.addEventListener('keyup', update);
 
 update();

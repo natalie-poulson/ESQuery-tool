@@ -20,7 +20,5 @@
     "eslint": "^6.1.0",
     "eslint-config-google": "^0.13.0"
   },
-  "dependencies": {
-    "esquery": "^1.0.1"
-  }
+  "dependencies": {}
 }
