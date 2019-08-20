@@ -9,13 +9,15 @@ const update = () => {
     const query = queryNode.value.replace(/\n/g, '');
     const queryAst = esquery.parse(query, {sourceType: 'module'});
     const matches = esquery.match(ast, queryAst);
-    const numMatches = matches.length;
-    const h4 = document.createElement('h4');
-    h4.textContent = 'Found ' + numMatches + ' node(s)';
+
     outputNode.innerHTML = JSON.stringify(matches, null, '  ');
+
+    const h4 = document.createElement('h4');
+    h4.textContent = 'Found ' + matches.length + ' node(s)';
     outputNode.prepend(h4);
   } catch (e) {
-    outputNode.innerHTML = e.message;
+    console.log(e);
+    outputNode.innerHTML = '<b>'+ e.name +'</b>' + '\n' + e.message;
   }
 };
 
