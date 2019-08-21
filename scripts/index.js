@@ -1,7 +1,7 @@
 const inputNode = document.getElementById('input');
 const queryNode = document.getElementById('query');
 const outputNode = document.getElementById('output');
-
+const numOfNodes = document.getElementById('numOfNodes');
 
 const update = () => {
   try {
@@ -9,15 +9,12 @@ const update = () => {
     const query = queryNode.value.replace(/\n/g, '');
     const queryAst = esquery.parse(query, {sourceType: 'module'});
     const matches = esquery.match(ast, queryAst);
-
     outputNode.innerHTML = JSON.stringify(matches, null, '  ');
-
-    const h4 = document.createElement('h4');
-    h4.textContent = 'Found ' + matches.length + ' node(s)';
-    outputNode.prepend(h4);
+    numOfNodes.textContent = 'Found ' + matches.length + ' node(s)';
   } catch (e) {
     console.log(e);
-    outputNode.innerHTML = '<b>'+ e.name +'</b>' + '\n' + e.message;
+    outputNode.innerHTML = '';
+    numOfNodes.textContent = e.message;
   }
 };
 
