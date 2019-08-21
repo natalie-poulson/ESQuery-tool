@@ -3,30 +3,31 @@ body {
     display:flex;
     flex-direction: column;
     height:100vh;
-    justify-content: center;
+    width:100vw;
+    justify-content: space-around;
     align-items: center;
     font-family:Helvetica, Arial, sans-serif;
 }
+section, #query {
+    width:80vw;
+}
 section {
     display:flex;
-    width:80vw;
+    justify-content: space-around;
 }
 textarea {
     font-family:Helvetica, Arial, sans-serif;
     font-size: 16px;
 }
 #query {
-    width:80vw;
     height:10vh;
 }
-#input, div{
+#input, div {
     width:35vw;
-    height:70vh;
-    margin: 0px 50px 20px 50px;
-    /* border: dashed 2px red; */
+    height:75vh;
 }
 #output{ 
-    font-size: 14px;
+    font-size: 15px;
     font-family:Helvetica, Arial, sans-serif;
 }
 #numOfNodes{
