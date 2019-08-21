@@ -8,10 +8,10 @@ body {
     align-items: center;
     font-family:Helvetica, Arial, sans-serif;
 }
-section, #query {
+main, #query {
     width:80vw;
 }
-section {
+main {
     display:flex;
     justify-content: space-around;
 }
