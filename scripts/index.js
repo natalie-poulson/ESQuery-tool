@@ -2,30 +2,50 @@ const inputNode = document.getElementById('input');
 const queryNode = document.getElementById('query');
 const outputNode = document.getElementById('output');
 const numOfNodes = document.getElementById('numOfNodes');
+const themeWrapper = document.querySelector('.theme-switch-wrapper');
+const textAreas = document.getElementsByClassName('theme-switch');
+const toggleBody = document.querySelector('.toggle-body');
+const toggleBtn = document.querySelector('.toggle-btn');
 // eslint-disable-next-line max-len
-const toggleSwitch = document.querySelector('.theme-switch-wrapper input[type="checkbox"]');
+const savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+// fix this
+let light = true;
 
-// eslint-disable-next-line require-jsdoc
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute('data-theme', 'dark');
+toggleBtn.addEventListener('click', () => {
+  themeWrapper.classList.toggle('theme-switch-wrapper--on');
+  for (textArea of textAreas) {
+    textArea.classList.toggle('theme-switch--on');
+  }
+  toggleBody.classList.toggle('toggle-body--on');
+  toggleBtn.classList.toggle('toggle-btn--on');
+
+  if (light) {
     localStorage.setItem('theme', 'dark');
+    light = false;
   } else {
-    document.documentElement.setAttribute('data-theme', 'light');
     localStorage.setItem('theme', 'light');
+    light = true;
+  }
+});
+
+
+if (savedTheme) {
+  if (savedTheme === 'light') {
+    themeWrapper.classList.add('theme-switch-wrapper');
+    for (textArea of textAreas) {
+      textArea.classList.add('theme-switch');
+    }
+    toggleBody.classList.add('toggle-body');
+    toggleBtn.classList.add('toggle-btn');
   }
 }
-
-toggleSwitch.addEventListener('change', switchTheme, false);
-
-// eslint-disable-next-line max-len
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-
-if (currentTheme) {
-  document.documentElement.setAttribute('data-theme', currentTheme);
-  if (currentTheme === 'dark') {
-    toggleSwitch.checked = true;
+if (savedTheme === 'dark') {
+  themeWrapper.classList.add('theme-switch-wrapper--on');
+  for (textArea of textAreas) {
+    textArea.classList.add('theme-switch--on');
   }
+  toggleBody.classList.add('toggle-body--on');
+  toggleBtn.classList.add('toggle-btn--on');
 }
 
 const update = () => {
@@ -37,9 +57,9 @@ const update = () => {
     outputNode.innerHTML = JSON.stringify(matches, null, '  ');
     numOfNodes.textContent = 'Found ' + matches.length + ' node(s)';
   } catch (e) {
-    console.log(e);
     outputNode.innerHTML = '';
     numOfNodes.textContent = e.message;
+    numOfNodes.style.textAlign = 'center';
   }
 };
 

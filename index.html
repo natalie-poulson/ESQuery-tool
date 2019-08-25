@@ -7,23 +7,20 @@
     <link rel='stylesheet' href='./styles/style.css'></style>
     <script src="https://unpkg.com/esprima@~4.0/dist/esprima.js"></script>
     <script src="./scripts/esquery.js"></script>
-    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/index.js" defer ></script>
     <title>Document</title>
 </head>
-<body>
-    <div class="theme-switch-wrapper">
-        <input type="checkbox" id="checkbox" />
-        <!-- <div class="slider round"></div> -->
-        <em>Enable Dark Mode</em>
+<body class='theme-switch-wrapper'>
+    <div class='toggle-body'>
+        <div class = 'toggle-btn'></div>
     </div>
     <main>
-        <textarea id ='input'>let x = 5</textarea>
-        <aside>
+        <textarea id ='input' class='theme-switch' >let x = 5</textarea>
+        <aside class='theme-switch'>
             <p id='numOfNodes'></p>
             <pre id='output'>output</pre>
         </aside>
-        </div>
     </main>
-    <textarea id= 'query'>Program</textarea>
+    <textarea id= 'query' class='theme-switch'>Program</textarea>
 </body>
 </html>
