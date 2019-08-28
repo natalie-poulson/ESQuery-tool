@@ -55,7 +55,7 @@ const update = () => {
     numOfNodes.textContent = 'Found ' + matches.length + ' node(s)';
   } catch (e) {
     outputNode.innerHTML = '';
-    numOfNodes.textContent = e.message;
+    numOfNodes.textContent = 'ERROR:  ' + e.message;
     numOfNodes.style.textAlign = 'center';
   }
 };
