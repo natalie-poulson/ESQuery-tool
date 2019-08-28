@@ -2,6 +2,7 @@ const inputNode = document.getElementById('input');
 const queryNode = document.getElementById('query');
 const outputNode = document.getElementById('output');
 const numOfNodes = document.getElementById('numOfNodes');
+const checkbox = document.getElementById('myCheck');
 const themeWrapper = document.querySelector('.theme-switch-wrapper');
 const textAreas = document.getElementsByClassName('theme-switch');
 const toggleBtn = document.querySelector('.switch');
@@ -10,7 +11,25 @@ const savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme')
 // fix this
 let light = true;
 
+if (savedTheme) {
+  if (savedTheme === 'light') {
+    themeWrapper.classList.add('theme-switch-wrapper');
+    for (textArea of textAreas) {
+      textArea.classList.add('theme-switch');
+    }
+  }
+}
+if (savedTheme === 'dark') {
+  light = false;
+  themeWrapper.classList.add('theme-switch-wrapper--on');
+  for (textArea of textAreas) {
+    textArea.classList.add('theme-switch--on');
+  }
+}
+
+
 toggleBtn.addEventListener('change', () => {
+  console.log(light)
   themeWrapper.classList.toggle('theme-switch-wrapper--on');
   for (textArea of textAreas) {
     textArea.classList.toggle('theme-switch--on');
@@ -25,21 +44,6 @@ toggleBtn.addEventListener('change', () => {
   }
 });
 
-
-if (savedTheme) {
-  if (savedTheme === 'light') {
-    themeWrapper.classList.add('theme-switch-wrapper');
-    for (textArea of textAreas) {
-      textArea.classList.add('theme-switch');
-    }
-  }
-}
-if (savedTheme === 'dark') {
-  themeWrapper.classList.add('theme-switch-wrapper--on');
-  for (textArea of textAreas) {
-    textArea.classList.add('theme-switch--on');
-  }
-}
 
 const update = () => {
   try {
