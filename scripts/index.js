@@ -2,14 +2,12 @@ const inputNode = document.getElementById('input');
 const queryNode = document.getElementById('query');
 const outputNode = document.getElementById('output');
 const numOfNodes = document.getElementById('numOfNodes');
-const checkbox = document.getElementById('myCheck');
 const themeWrapper = document.querySelector('.theme-switch-wrapper');
 const textAreas = document.getElementsByClassName('theme-switch');
 const toggleBtn = document.querySelector('.switch');
+let light = true;
 // eslint-disable-next-line max-len
 const savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-// fix this
-let light = true;
 
 if (savedTheme) {
   if (savedTheme === 'light') {
@@ -19,6 +17,7 @@ if (savedTheme) {
     }
   }
 }
+
 if (savedTheme === 'dark') {
   light = false;
   themeWrapper.classList.add('theme-switch-wrapper--on');
@@ -27,14 +26,11 @@ if (savedTheme === 'dark') {
   }
 }
 
-
 toggleBtn.addEventListener('change', () => {
-  console.log(light)
   themeWrapper.classList.toggle('theme-switch-wrapper--on');
   for (textArea of textAreas) {
     textArea.classList.toggle('theme-switch--on');
   }
-
   if (light) {
     localStorage.setItem('theme', 'dark');
     light = false;
@@ -43,7 +39,6 @@ toggleBtn.addEventListener('change', () => {
     light = true;
   }
 });
-
 
 const update = () => {
   try {

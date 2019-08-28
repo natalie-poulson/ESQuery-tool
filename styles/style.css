@@ -27,7 +27,7 @@ textarea {
 #output{ 
     font-size: 1.05em;
     font-family:Helvetica, Arial, sans-serif;
-    padding-left:50px;
+    padding-left:5git 0px;
 }
 #numOfNodes{
     margin:0;
@@ -67,25 +67,18 @@ main, #query {
     border: double var(--primary-color) 3px;
     transition: 1.5s ease-in-out;
 }
-
-
-/* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
     width: 45px;
     height: 25.5px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
+}
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  /* The slider */
-  .slider {
+}
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -95,9 +88,8 @@ main, #query {
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  .slider:before {
+}  
+.slider:before {
     position: absolute;
     content: "";
     height: 19.5px;
@@ -107,27 +99,21 @@ main, #query {
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  input:checked + .slider {
+}  
+input:checked + .slider {
     background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
+}  
+input:focus + .slider {
     box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
+}  
+input:checked + .slider:before {
     -webkit-transform: translateX(19.5px);
     -ms-transform: translateX(19.5px);
     transform: translateX(19.5px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
+}
+.slider.round {
     border-radius: 34px;
-  }
-  
-  .slider.round:before {
+}  
+.slider.round:before {
     border-radius: 50%;
-  }
+}
