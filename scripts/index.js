@@ -5,7 +5,7 @@ const numOfNodes = document.getElementById('numOfNodes');
 const themeWrapper = document.querySelector('.theme-switch-wrapper');
 const textAreas = document.getElementsByClassName('theme-switch');
 const toggleBtn = document.querySelector('.switch');
-let light = true;
+const asideNode = document.querySelector('aside');
 // eslint-disable-next-line max-len
 const savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
@@ -42,16 +42,22 @@ toggleBtn.addEventListener('change', () => {
 
 const update = () => {
   try {
+    asideNode.classList.remove('error');
     const ast = esprima.parse(inputNode.value, {sourceType: 'module'});
     const query = queryNode.value.replace(/\n/g, '');
     const queryAst = esquery.parse(query, {sourceType: 'module'});
     const matches = esquery.match(ast, queryAst);
     outputNode.innerHTML = JSON.stringify(matches, null, '  ');
-    numOfNodes.textContent = 'Found ' + matches.length + ' node(s)';
+    if (matches.length === 1) {
+      numOfNodes.textContent = 'Found ' + matches.length + ' node';
+    } else {
+      numOfNodes.textContent = 'Found ' + matches.length + ' nodes';
+    }
   } catch (e) {
     outputNode.innerHTML = '';
     numOfNodes.textContent = 'ERROR:  ' + e.message;
     numOfNodes.style.textAlign = 'center';
+    asideNode.classList.add('error');
   }
 };
 

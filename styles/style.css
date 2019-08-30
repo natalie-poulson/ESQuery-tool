@@ -48,24 +48,24 @@ main, #query {
 .theme-switch-wrapper {
     background-color:var(--primary-color);
     color: var(--secondary-color);
-    transition: 1.5s ease-in-out;
+    /* transition: .5s ease-in-out; */
 }
 .theme-switch-wrapper--on {
     background-color:var(--secondary-color);
     color: var(--primary-color);
-    transition: 1.5s ease-in-out;
+    /* transition: .5s ease-in-out; */
 }
 .theme-switch {
     background-color:var(--primary-color);
     color: var(--secondary-color);
     border: double var(--secondary-color) 3px;
-    transition: 1.5s ease-in-out;
+    /* transition: .5s ease-in-out; */
 }
 .theme-switch--on{
     background-color:var(--secondary-color);
     color: var(--primary-color);
     border: double var(--primary-color) 3px;
-    transition: 1.5s ease-in-out;
+    /* transition: .5s ease-in-out; */
 }
 .switch {
     position: relative;
@@ -116,4 +116,9 @@ input:checked + .slider:before {
 }  
 .slider.round:before {
     border-radius: 50%;
+}
+.error{
+    border: double #D8000C 3px;
+    color:#D8000C;
+    transition: none;
 }
