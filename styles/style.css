@@ -21,13 +21,26 @@ textarea {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
+header {
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    margin-bottom:20px;
+    height:7vh;
+}
+header h1 {
+    margin-bottom:0px;
+}
+header h4 {
+    margin-top:5px;
+}
 #query {
     height:10vh;
 }
 #output{ 
     font-size: 1.05em;
     font-family:Helvetica, Arial, sans-serif;
-    padding-left:5git 0px;
+    padding-left:5px;
 }
 #numOfNodes{
     margin:0;
@@ -38,12 +51,18 @@ main, #query {
 }
 #input, aside {
     width:35vw;
-    height:75vh;
+    height:65vh;
 }
 #input, aside, #query {
     overflow:scroll;
     border-radius: 5px;
     padding: 5px;
+}
+.invert {
+    color: var(--secondary-color);
+}
+.invert--on {
+    color: var(--primary-color);
 }
 .theme-switch-wrapper {
     background-color:var(--primary-color);

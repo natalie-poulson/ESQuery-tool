@@ -17,4 +17,4 @@ To learn more about Esprima, <a href="https://github.com/jquery/esprima">click h
 ## References
 * <a href="https://estools.github.io/esquery/">original</a> by <a href="https://github.com/estools">estools</a>
 * <a href="https://github.com/mcleary03/esqueryREPL">esqueryREPL</a> by <a href="https://github.com/mcleary03">mcleary03</a>
-* <a href="https://github.com/bcorman/esquery-training">ast-training-repl</a> by <a href="https://github.com/bcorman">bcoorman</a>
+* <a href="https://github.com/bcorman/esquery-training">ast-training-repl</a> by <a href="https://github.com/bcorman">bcorman</a>

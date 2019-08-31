@@ -6,8 +6,10 @@ const themeWrapper = document.querySelector('.theme-switch-wrapper');
 const textAreas = document.getElementsByClassName('theme-switch');
 const toggleBtn = document.querySelector('.switch');
 const asideNode = document.querySelector('aside');
+const githubIcon = document.querySelector('.invert');
 // eslint-disable-next-line max-len
 const savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+let light = true;
 
 if (savedTheme) {
   if (savedTheme === 'light') {
@@ -15,6 +17,7 @@ if (savedTheme) {
     for (textArea of textAreas) {
       textArea.classList.add('theme-switch');
     }
+    githubIcon.classList.add('invert');
   }
 }
 
@@ -24,6 +27,7 @@ if (savedTheme === 'dark') {
   for (textArea of textAreas) {
     textArea.classList.add('theme-switch--on');
   }
+  githubIcon.classList.add('invert--on');
 }
 
 toggleBtn.addEventListener('change', () => {
@@ -31,6 +35,7 @@ toggleBtn.addEventListener('change', () => {
   for (textArea of textAreas) {
     textArea.classList.toggle('theme-switch--on');
   }
+  githubIcon.classList.toggle('invert--on');
   if (light) {
     localStorage.setItem('theme', 'dark');
     light = false;
