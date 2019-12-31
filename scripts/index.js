@@ -7,7 +7,6 @@ const textAreas = document.getElementsByClassName('theme-switch');
 const toggleBtn = document.querySelector('.switch');
 const asideNode = document.querySelector('aside');
 const githubIcon = document.querySelector('.invert');
-// eslint-disable-next-line max-len
 const savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 let light = true;
 
