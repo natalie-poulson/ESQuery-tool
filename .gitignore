@@ -6,3 +6,6 @@ node_modules
 
 # Ignore eslint
 .eslintrc.json
+
+# Ignore VSCode workspace
+.vscode
