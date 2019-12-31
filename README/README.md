@@ -15,11 +15,11 @@ To learn more about Esprima, <a href="https://github.com/jquery/esprima">click h
 * Light & Dark mode 
 
 ## Screenshots
-<img src="dark.png" alt="screenshot of tool, full screen with dark mode" width="800">
+<img src="./dark.png" alt="screenshot of tool, full screen with dark mode" width="800">
 
-<img src="error.png" alt="screenshot of tool, full screen with light mode and error" width="800">
+<img src="./error.png" alt="screenshot of tool, full screen with light mode and error" width="800">
 
-<img src="light.png" alt="screenshot of tool, responsive with light mode" width="400">
+<img src="./light.png" alt="screenshot of tool, responsive with light mode" width="400">
 
 ## References
 * <a href="https://estools.github.io/esquery/">original</a> by <a href="https://github.com/estools">estools</a>

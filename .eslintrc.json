@@ -4,6 +4,7 @@
         "es6": true
     },
     "extends": [
+        "esline:recommended",
         "google"
     ],
     "globals": {
