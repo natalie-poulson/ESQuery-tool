@@ -5,8 +5,8 @@ This is a tool that uses the ESQuery library to query the Abstract Syntax Tree (
 
 ## Get Started
 * Visit the <a href="https://natalie-poulson.github.io/ESQuery-tool/" target="_blank">website</a>
-* In the "Code" section, enter JavaScript code 
-* Use the "ESQuery" section to query the Abstract Syntax Tree of the code. Any matches will be output in the "Nodes found in the Abstract Syntax Tree Section" 
+* In the <em>Code</em> section, enter JavaScript code 
+* Use the <em>ESQuery</em> section to query the Abstract Syntax Tree of the code. Matches will be appear in the <em>Nodes found in the Abstract Syntax Tree Section</em> 
 
 ## Features
 * Simplied, clean UI
