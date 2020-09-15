@@ -13,23 +13,23 @@ body {
 }
 main {
     display:flex;
+    flex-direction: column;
     justify-content: space-around;
     width:95%;
-    height:85%;
+    height:100%;
+    overflow:scroll;
 }
 textarea {
     font-family:Helvetica, Arial, sans-serif;
     font-size: 1.05em;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    width:100%;
 }
 header {
     width:100%;
+    height:10%;
     display:flex;
     justify-content: space-around;
-    margin-bottom:20px;
-    height:7%;
 }
 header h1 {
     margin-bottom:0px;
@@ -37,24 +37,34 @@ header h1 {
 header h4 {
     margin-top:5px;
 }
-#left {
+.top-section{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:70%;
+}
+.top-section div {
+    width:40%;
+    height:100%;
+    padding:30px;
+}
+.input-container textarea, aside{
+    width:100%;
+    height:90%;
+    overflow:scroll;
+}
+.bottom-section{
+    display:flex;
+    justify-content: center;
+    height:20%;
+}
+.query-container  {
     display:flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width:45%;
-    height:90%;
+    width:80%;
 }
-#input {
-    height:45%;
-    width:60%;
-}
-#query {
-    height:10%;
-    width:95%;
-}
-aside {
-    width:40%;
+.query-container > textarea {
+    height:50%;
 }
 #output{ 
     font-size: 1.05em;
@@ -65,7 +75,6 @@ aside {
     margin:0;
     text-align: right;
 }
-
 #input, aside, #query {
     overflow:scroll;
     border-radius: 5px;

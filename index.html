@@ -25,14 +25,25 @@
         </div>
     </header>
     <main>
-        <div id="left">
-            <textarea id ='input' class='theme-switch' >let x = 5</textarea>
-            <textarea id= 'query' class='theme-switch'>Program</textarea>
-        </div>
-        <aside class='theme-switch'>
-            <p id='numOfNodes'></p>
-            <pre id='output'></pre>
-        </aside>
+        <section class ='top-section'>
+            <div class='input-container'>
+                <label for="input"><b>Code:</b></label>
+                <textarea id ='input' class='theme-switch' >let x = 5</textarea>
+            </div>
+            <div class = 'ast-container'>
+                <label><b>Abstract Syntax Tree:</b></label>
+                <aside class='theme-switch'>
+                    <p id='numOfNodes'></p>
+                    <pre id='output'></pre>
+                </aside>
+            </div>
+        </section>
+        <section class='bottom-section'>
+            <div class='query-container'>
+                <label for="query"><b>ESQuery:</b></label>
+                <textarea id= 'query' class='theme-switch'>Program</textarea>
+            </div>
+        </section>
     </main>
 </body>
 </html>

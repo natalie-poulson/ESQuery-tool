@@ -59,7 +59,16 @@ const update = () => {
     }
   } catch (e) {
     outputNode.innerHTML = '';
-    numOfNodes.textContent = 'ERROR:  ' + e.message;
+
+    if (e.lineNumber){
+      numOfNodes.innerHTML = `
+      <h3>There\'s an error in the code.</h3> 
+      ${e.message}`;
+    } else {
+      numOfNodes.innerHTML = `
+      <h3>There\'s an error in the ESQuery.</h3> 
+      ${e.message}`;     
+    }
     numOfNodes.style.textAlign = 'center';
     asideNode.classList.add('error');
   }
