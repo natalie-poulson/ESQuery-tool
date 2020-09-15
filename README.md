@@ -10,7 +10,7 @@ To learn more about ESQuery, <a href="https://github.com/estools/esquery" target
 * In the <em>Code</em> section, enter JavaScript code 
 * Use the <em>ESQuery</em> section to query the Abstract Syntax Tree of the code. Matches will be appear in the <em>Nodes found in the Abstract Syntax Tree</em> Section
 
-## Features
+## What's New in this Version:
 * Simplied, clean UI
 * Responsive Design
 * Error handling 
