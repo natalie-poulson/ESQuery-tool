@@ -29,6 +29,6 @@ To learn more about ESQuery, <a href="https://github.com/estools/esquery" target
 <img src="./assets/responsive- white.png" alt="screenshot of tool, responsive" width="400">  <img src="./assets/responsive - dark.png" alt="screenshot of tool, responsive and in dark mode" width="400">
 
 ## References
-* <a href="https://estools.github.io/esquery/" target="_blank">original</a> by <a href="https://github.com/estools" target="_blank">estools</a>
+* <a href="https://estools.github.io/esquery/" target="_blank">Original Tool</a> by <a href="https://github.com/estools" target="_blank">estools</a>
 
 
