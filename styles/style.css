@@ -32,7 +32,7 @@ header {
     justify-content: space-around;
 }
 header h1 {
-    margin-bottom:0px;
+    margin-bottom:0;
 }
 header h4 {
     margin-top:5px;
@@ -46,7 +46,7 @@ header h4 {
 .top-section div {
     width:40%;
     height:100%;
-    padding:30px;
+    margin:30px;
 }
 .input-container textarea, aside{
     width:100%;

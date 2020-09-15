@@ -1,4 +1,8 @@
-// CODE FROM https://github.com/estools/esquery
+/**********************************************************
+NOTE: 
+THIS CODE IS FROM https://github.com/estools/esquery
+**********************************************************/
+
 
 /* eslint-disable */
 
