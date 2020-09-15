@@ -8,7 +8,7 @@ To learn more about ESQuery, <a href="https://github.com/estools/esquery" target
 ## Get Started
 * Visit the <a href="https://natalie-poulson.github.io/ESQuery-tool/" target="_blank">website</a>
 * In the <em>Code</em> section, enter JavaScript code 
-* Use the <em>ESQuery</em> section to query the Abstract Syntax Tree of the code. Matches will be appear in the <em>Nodes found in the Abstract Syntax Tree Section</em> 
+* Use the <em>ESQuery</em> section to query the Abstract Syntax Tree of the code. Matches will be appear in the <em>Nodes found in the Abstract Syntax Tree</em> Section
 
 ## Features
 * Simplied, clean UI
