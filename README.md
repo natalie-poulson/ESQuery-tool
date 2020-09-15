@@ -30,6 +30,5 @@ To learn more about ESQuery, <a href="https://github.com/estools/esquery" target
 
 ## References
 * <a href="https://estools.github.io/esquery/" target="_blank">original</a> by <a href="https://github.com/estools" target="_blank">estools</a>
-* <a href="https://github.com/mcleary03/esqueryREPL" target="_blank">esqueryREPL</a> by <a href="https://github.com/mcleary03" target="_blank">mcleary03</a>
-* <a href="https://github.com/bcorman/esquery-training" target="_blank">ast-training-repl</a> by <a href="https://github.com/bcorman" target="_blank">bcorman</a>
+
 
